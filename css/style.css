@@ -1,0 +1,324 @@
+::-webkit-scrollbar {
+    -webkit-appearance: none;
+    width: 7px;
+}
+::-webkit-scrollbar-thumb {
+    border-radius: 4px;
+    background-color: rgba(0,0,0,.5);
+    -webkit-box-shadow: 0 0 1px rgba(255,255,255,.5);
+}
+body{
+    background-color: #FBFBEF;
+}
+ul {
+    list-style-type: none;
+    list-style-type: none;
+    -webkit-padding-start: 3px;
+    -webkit-margin-before: 0px;
+    -webkit-margin-after: 3px;
+}
+.wrap{
+    min-width: 1400px;
+}
+.chat{
+    position: relative;
+    float: left;
+    width: 470px;
+}
+.chatWindow {
+    position: relative;
+    float: left;
+    width: 450px;
+    height: 350px;
+    /*background*/-color: #EDE7D0;
+    border: 1px solid black;
+}
+.chatText{
+    position: relative;
+    float: left;
+    height: 325px;
+    width: 100%;
+    overflow-y:scroll;
+}
+.chatInput{
+    position: relative;
+    float: left;
+    width: 100%;
+    height: 25px;
+}
+#textSend{
+    width: 395px;
+}
+.chatName{
+    color: blue;
+}
+.chatLineMe{
+    text-align: right;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+.chatLineOther{
+    text-align: left;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+.chatLog{
+    text-align: right;
+    padding-left: 5px;
+    padding-right: 15px;
+    color: red;
+}
+.dado{
+    position: relative;
+    float: left;
+    width: 65%;
+    border-left: 3px solid black;
+}
+.dadoControl{
+    position: relative;
+    float: left;
+    width: 100%;
+    height: 190px;
+    padding-top: 15px;
+    border-bottom: 1px solid black;
+    display: none;
+}
+.dadoResult{
+    position: relative;
+    float: left;
+    height: 325px;
+    width: 100%;
+    overflow-y:scroll;
+}
+.caracDice {
+    height: 28px;
+    width: 28px;
+    overflow: hidden;
+    position: relative;
+    display: inline-block;
+    float: left;
+    line-height: 28px;
+    margin-left: 5px;
+}
+.carac1:hover,
+.carac2:hover,
+.carac3:hover,
+.carac4:hover,
+.carac5:hover{
+    top: 0px;
+}
+.carac1{
+    position: relative;
+    top: -28px;
+    left: -28px;
+}
+.carac2{
+    position: relative;
+    top: -28px;
+    left: -56px;
+}
+.carac3{
+    position: relative;
+    top: -28px;
+    left: -84px;
+}
+.carac4{
+    position: relative;
+    top: -28px;
+    left: -112px;
+}
+.carac5{
+    position: relative;
+    top: -28px;
+    left: -140px;
+}
+.selCarac1{
+    position: relative;
+    top: -56px;
+    left: -28px;
+}
+.selCarac2{
+    position: relative;
+    top: -56px;
+    left: -56px;
+}
+.selCarac3{
+    position: relative;
+    top: -56px;
+    left: -84px;
+}
+.selCarac4{
+    position: relative;
+    top: -56px;
+    left: -112px;
+}
+.selCarac5{
+    position: relative;
+    top: -56px;
+    left: -140px;
+}
+.furorDice {
+    height: 28px;
+    width: 28px;
+    overflow: hidden;
+    position: relative;
+    display: inline-block;
+    float: left;
+    line-height: 28px;
+    margin-left: 5px;
+}
+.furor1:hover,
+.furor2:hover,
+.furor3:hover,
+.furor4:hover,
+.furor5:hover{
+    top: 0px;
+}
+.furor1{
+    position: relative;
+    top: -28px;
+    left: -28px;
+}
+.furor2{
+    position: relative;
+    top: -28px;
+    left: -56px;
+}
+.furor3{
+    position: relative;
+    top: -28px;
+    left: -84px;
+}
+.furor4{
+    position: relative;
+    top: -28px;
+    left: -112px;
+}
+.furor5{
+    position: relative;
+    top: -28px;
+    left: -140px;
+}
+.selFuror1{
+    position: relative;
+    top: -56px;
+    left: -28px;
+}
+.selFuror2{
+    position: relative;
+    top: -56px;
+    left: -56px;
+}
+.selFuror3{
+    position: relative;
+    top: -56px;
+    left: -84px;
+}
+.selFuror4{
+    position: relative;
+    top: -56px;
+    left: -112px;
+}
+.selFuror5{
+    position: relative;
+    top: -56px;
+    left: -140px;
+}
+.line{
+    position: relative;
+    float: left;
+    width: 100%;
+}
+.lineTitle{
+    margin-left: 20px;
+    position: relative;
+    float: left;
+    width: 100px;
+    font-weight: bold;
+    text-align: right;
+}
+.lineBody{
+    position: relative;
+    float: left;
+    margin-left: 5px;
+}
+.dadoButtons{
+    position: relative;
+    float: left;
+    width: 35%;
+}
+.arrowList{
+    position: relative;
+    float: left;
+    width: 20px;
+    margin-top: 50px;
+}
+.arrowButton{
+    height: 20px;
+    width: 20px;
+    overflow: hidden;
+    position: relative;
+    display: inline-block;
+    float: left;
+    line-height: 28px;
+    margin-bottom: 10px;
+}
+.addImg:hover{
+    top: -50px;
+}
+.addImg {
+    position: relative;
+    float: left;
+    top: 0px;
+    left: -27px;
+}
+.removeImg:hover{
+    top:-25px;
+}
+.removeImg{
+    position: relative;
+    float: left;
+    top: -75px;
+    left: 0px; 
+}
+.savedList{
+    position: relative;
+    float: left;
+    margin-left: 30px;
+    height: 180px;
+    width: 250px;
+    border: 1px solid black;
+    overflow-y:scroll;
+}
+.action{
+    width: 230px;
+    display: none;
+}
+.noSelList{
+    background-color:transparent;
+    color: black;
+}
+.selList{
+    background-color:blue;
+    color:white;
+}
+.resultBlock{
+    position: relative;
+    float: left;
+    width: 90%;
+    margin-left: 20px;
+    border-bottom: 1px solid black;
+}
+.resultDice{
+    font-weight: bold;
+    color: blue;
+}
+.resultNegatives{
+    font-weight: bold;
+    color: red;
+}
+.hideControl{
+    position: absolute;
+    top: -9px;
+    left: 3px;
+}

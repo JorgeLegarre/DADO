@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8"/>
+        <title>Yggdrasil</title>
+        <link rel="stylesheet" href="css/style.css"/>
+        <script src="js/peerJS/peer.min.js"></script>
+        <script src="js/jQuery/jquery-1.10.2.min.js"></script>
+    </head>
+    <body>
+        <div id="login">
+            <h2>Please login</h2>
+            Username: <input type="text" id="username"></input>&nbsp;<input type="button" value="login" id="loginButton"></input>
+        </div>
+        <div class="wrap" id="wrap">
+            <div class="chat" id="chat">
+                <h1>Yggdrasil</h1>
+                <h2>Username: <span class="user" id="user"></span>&nbsp;<input type="button" value="change" id="usernameButton"></input></h2>
+                <h2>My Id: <span id="myId"></span></h2>
+                <div>
+                    ID host:&nbsp;<input type="text" id="idHost"></input>&nbsp;<input type="button" value="connect" id="connect"></input>&nbsp;<input type="button" value="disconnect" id="disconnect"></input>
+                </div>
+                <div>
+                    Status:&nbsp;<span id="status"></span>
+                </div>
+                <br/>
+                <div class="chatWindow" id="chatWindow">
+                    <div class="chatText" id="chatText"></div>
+                    <div class="chatInput">
+                        <input type="text" id="textSend"></input><input type="button" value="send" id="send"></input>
+                    </div>
+                </div>
+            </div>
+            <div class="dado" id="dado">
+                <div class="dadoControl">
+                    <div class="dadoButtons">
+                        <div class="line">
+                            <div class="lineTitle">Caracteristica:</div>
+                            <div class="lineBody">
+                                <div class="caracDice">
+                                    <img src="img/numbers-sprite-100.png" width="280px" class="carac1" id="carac1" alt="1"></img>
+                                </div>
+                                <div class="caracDice">
+                                    <img src="img/numbers-sprite-100.png" width="280px" class="carac2" id="carac2" alt="2"></img>
+                                </div>
+                                <div class="caracDice">
+                                    <img src="img/numbers-sprite-100.png" width="280px" class="carac3" id="carac3" alt="3"></img>
+                                </div>
+                                <div class="caracDice">
+                                    <img src="img/numbers-sprite-100.png" width="280px" class="carac4" id="carac4" alt="4"></img>
+                                </div>
+                                <div class="caracDice">
+                                    <img src="img/numbers-sprite-100.png" width="280px" class="carac5" id="carac5" alt="5"></img>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="line">
+                           <div  class="lineTitle">
+                                Habilidad:
+                            </div>
+                           <div class="lineBody">
+                                <input type="text" id="habilidad" value="0"></input>
+                           </div>
+                        </div>
+                        <div class="line">
+                            <div class="lineTitle">
+                                Furor:
+                            </div>
+                            <div class="lineBody">
+                                <div class="furorDice">
+                                    <img src="img/numbers-sprite-100.png" width="280px" class="furor1" id="furor1" alt="1"></img>
+                                </div>
+                                <div class="furorDice">
+                                    <img src="img/numbers-sprite-100.png" width="280px" class="furor2" id="furor2" alt="2"></img>
+                                </div>
+                                <div class="furorDice">
+                                    <img src="img/numbers-sprite-100.png" width="280px" class="furor3" id="furor3" alt="3"></img>
+                                </div>
+                                <div class="furorDice">
+                                    <img src="img/numbers-sprite-100.png" width="280px" class="furor4" id="furor4" alt="4"></img>
+                                </div>
+                                <div class="furorDice">
+                                    <img src="img/numbers-sprite-100.png" width="280px" class="furor5" id="furor5" alt="5"></img>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="line">
+                           <div  class="lineTitle">
+                                Negativos:
+                            </div>
+                           <div class="lineBody">
+                                <input type="text" id="negativos" value="0"></input>
+                           </div>
+                        </div>
+                        <div class="line">
+                            <div class="lineTitle">
+                                Guardar:
+                            </div>
+                            <div class="lineBody">
+                                <input type = "radio" name = "guardar" value = "2" checked = "checked" />
+                                2 dados /
+                                <input type = "radio" name = "guardar" value = "1"/>
+                                1 dado </br> 
+                                <input type = "radio" name = "guardar" value = "3"/>
+                                3 dados / 
+                                <input type = "radio" name = "guardar" value = "5"/>
+                                Todos
+                            </div>
+                        </div>
+                        <div class="line">
+                            <div class="lineTitle">
+                                Explotar:
+                            </div>
+                            <div class="lineBody">
+                                <input type="checkbox" value="explotar" id="explotar" checked = "checked" >
+                            </div>
+                        </div>
+                        <div class="line">
+                            <div class="lineTitle">&nbsp;</div>
+                            <div class="lineBody">
+                                <input type="button" id="launch" value="Tirar"/>
+                                &nbsp;<input type="button" id="cleanScreen" value="Limpiar"/>
+                            </div>
+                        </div>
+                    </div><!--End dadoButton-->
+                    <div class="actionList">
+                        <div class="arrowList">
+                            <div class="arrowButton">
+                                <img src="img/arrow-button.png" width="100px" class="addImg" id="add" alt="1" title="add"></img>
+                            </div>
+                            <div class="arrowButton">
+                                <img src="img/arrow-button.png" width="100px" class="removeImg" id="remove" alt="1" title="remove"></img>
+                            </div>
+                        </div><!--End arrowList-->
+                        <div class="savedList">
+                            <input type="text" id="newName" class="action"></input>
+                            <ul id="actions"></ul>
+                        </div><!--End nameList-->
+                    </div>
+                </div><!--End dadoControl-->
+                <div class="dadoResult" id="dadoResult">&nbsp;</div>
+                <div class="hideControl">
+                    <input type="button" id="hide" value="Mostrar Dados"/>
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript" src="js/chat.js"></script>
+        <script type="text/javascript" src="js/chat.config.js"></script>
+        <script type="text/javascript" src="js/chat.ui.js"></script>
+        <script type="text/javascript" src="js/chat.ui.events.js"></script>
+        <script type="text/javascript" src="js/chat.ui.chatText.js"></script>
+        <script type="text/javascript" src="js/chat.ui.status.js"></script>
+        <script type="text/javascript" src="js/chat.model.js"></script>
+        <script type="text/javascript" src="js/chat.logic.js"></script>
+        <script type="text/javascript" src="js/chat.logic.peer.js"></script>
+        <script type="text/javascript" src="js/yggdrasil.js"></script>
+        <script type="text/javascript" src="js/yggdrasil.ui.js"></script>
+        <script type="text/javascript" src="js/yggdrasil.ui.events.js"></script>
+        <script type="text/javascript" src="js/yggdrasil.model.js"></script>
+        <script type="text/javascript" src="js/yggdrasil.logic.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+    </body>
+</html>
